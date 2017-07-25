@@ -11,8 +11,9 @@
     "gulp-concat": "*",
     "gulp-less": "*",
     "gulp-rigger": "*",
-    "svgo": "*",
-    "gulp-uglify": "*"
+    "gulp-svgo": "^1.2.0",
+    "gulp-uglify": "*",
+    "svgo": "*"
   },
   "dependencies": {
     "gulp-shorthand": "*"
