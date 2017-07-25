@@ -102,7 +102,7 @@ function createFolder(name) {
 }
 
 gulp.task('init', function() {
-	const folders = ['build', 'build/css', 'build/img', 'build/js', 'dev', 'dev/html', 'dev/html/includes', 'dev/js', 'dev/less', 'dev/svg'];
+	const folders = ['build', 'build/css', 'build/img', 'build/img/svg', 'build/js', 'dev', 'dev/html', 'dev/html/includes', 'dev/js', 'dev/less', 'dev/svg'];
 	folders.forEach((f) => {
 		createFolder(f);
 	});
@@ -112,7 +112,6 @@ gulp.task('init', function() {
 
 // default
 gulp.task('default', ['html', 'css', 'browser-sync', 'js'], function() {
-	console.log('123')
 	gulp.watch("dev/html/**/*.html", ['bs-reload', 'html']);
 	gulp.watch("dev/less/*.less", ['bs-reload', 'css']);
 	gulp.watch("dev/js/*.js", ['bs-reload', 'js']);
