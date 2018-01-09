@@ -1,0 +1,282 @@
+.today {
+  margin-bottom: 5px;
+
+  .main-photo {
+    position: relative;
+    display: block;
+    margin-bottom: 5px;
+
+    @media screen and (min-width: @breakpoint1) {
+      margin-bottom: 10px;
+    }
+
+    @media screen and (min-width: @breakpoint2) {
+      margin-bottom: 15px;
+    }
+
+    .date {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      padding: 5px 8px;
+      .notoserif();
+      background-color: fade(@white, 80%);
+
+      @media screen and (min-width: @breakpoint1) {
+        top: 10px;
+        left: 10px;
+      }
+
+      @media screen and (min-width: @breakpoint1) {
+        top: 20px;
+        left: 20px;
+        padding: 26px 39px;
+      }
+
+      &::after {
+        display: none;
+        content: '';
+        width: 3px;
+        height: 5px;
+        background-size: cover;
+        background-image: url('../img/arrow.png');
+        position: absolute;
+        top: 35px;
+        right: 20px;
+
+        @media screen and (min-width: @breakpoint2) {
+          display: block;
+        }
+      }
+
+      &__day {
+        display: block;
+        font-size: 18px;
+        line-height: 24px;
+        color: @black;
+        text-align: center;
+
+        @media screen and (min-width: @breakpoint2) {
+          font-size: 36px;
+          margin-bottom: 9px;
+        }
+      }
+
+      &__month {
+        color: @black;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: center;
+
+        @media screen and (min-width: @breakpoint2) {
+          font-size: 18px;
+        }
+      }
+    }
+
+    &__image {
+      max-width: 100%;
+      padding-bottom: 65%;
+      background-size: cover;
+      background-position: center center;
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    &__link {
+      display: block;
+
+      @media screen and (min-width: @breakpoint2) {
+        margin-bottom: 13px;
+      }
+    }
+
+    &__name {
+      display: none;
+      .notosans();
+      font-weight: bold;
+      font-size: 13px;
+      line-height: 18px;
+      color: @black;
+
+      @media screen and (min-width: @breakpoint1) {
+        display: block;
+      }
+    }
+    &__source {
+      display: none;
+      .notosans();
+      font-size: 13px;
+      line-height: 18px;
+      color: @gray5;
+
+      @media screen and (min-width: @breakpoint1) {
+        display: block;
+      }
+    }
+  }
+
+  &__photo-list {
+    font-size: 0;
+    margin-right: -5px;
+
+  }
+
+  &__photo-item {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(~"25% - 6px");
+    padding-bottom: 15.5%;
+    margin-right: 6px;
+    margin-bottom: 5px;
+    background-size: cover;
+    background-position: center center;
+
+  }
+
+}
+
+.advertisement {
+  background-color: @gray;
+  margin-bottom: 10px;
+  margin-top: 4px;
+
+  @media screen and (min-width: @breakpoint1) {
+    display: none;
+  }
+
+  & > a {
+    display: flex;
+  }
+
+  &__image {
+    flex-shrink: 0;
+    width: 100px;
+    height: 80px;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__text {
+    .notosans();
+    padding: 6px 4px 0 18px;
+  }
+
+  &__hint {
+    font-weight: bold;
+    font-size: 10px;
+    color: @gray2;
+    margin-bottom: 4px;
+  }
+
+  &__name {
+    font-size: 13px;
+    line-height: 18px;
+    color: @black;
+    font-weight: bold;
+  }
+
+  &__description {
+    font-size: 12px;
+    line-height: 17px;
+    color: @black;
+  }
+}
+
+.calendar {
+  margin-bottom: 13px;
+
+  &__list {
+    font-size: 0;
+    margin-right: -5px;
+
+    @media screen and (min-width: @breakpoint1) {
+      margin-right: -10px;
+    }
+
+    @media screen and (min-width: @breakpoint1) {
+      margin-right: -20px;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(~"25% - 6px");
+    padding-bottom: 15.5%;
+    margin-right: 6px;
+    margin-bottom: 5px;
+    background-size: cover;
+    background-position: center center;
+
+    @media screen and (min-width: @breakpoint1) {
+      width: calc(~"20% - 10px");
+      margin-right: 10px;
+      margin-bottom: 10px;
+      padding-bottom: 11.8%;
+    }
+
+    @media screen and (min-width: @breakpoint2) {
+      width: calc(~"25% - 20px");
+      margin-right: 20px;
+      margin-bottom: 20px;
+      padding-bottom: 14.5%;
+    }
+
+    &_date {
+      position: relative;
+
+
+
+      .date {
+
+        &__wrap {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translateY(-50%) translateX(-50%);
+        }
+
+        &__day {
+          display: block;
+          position: relative;
+          color: @black;
+          .notoserif();
+          text-align: center;
+          font-size: 18px;
+          line-height: 15px;
+          padding-top: 4px;
+
+          &::after {
+            content: '';
+            width: 3px;
+            height: 5px;
+            background-size: cover;
+            background-image: url('../img/arrow.png');
+            position: absolute;
+            top: 11px;
+            right: 2px;
+
+            @media screen and (min-width: @breakpoint1) {
+              top: 10px;
+            }
+          }
+        }
+
+        &__month {
+          display: block;
+          color: @black;
+          .notoserif();
+          text-align: center;
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}

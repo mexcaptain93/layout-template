@@ -1,0 +1,118 @@
+h1 {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 17px;
+  color: @black;
+  .playfair();
+  font-weight: normal;
+  font-size: 26px;
+  text-transform: uppercase;
+
+  @media screen and (min-width: @breakpoint1) {
+    font-size: 40px;
+    margin-bottom: 28px;
+  }
+
+  & > span {
+    padding-right: 18px;
+
+    @media screen and (min-width: @breakpoint1) {
+      padding-right: 17px;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: @black;
+    width: 100%;
+    height: 2px;
+    bottom: 3px;
+
+    @media screen and (min-width: @breakpoint1) {
+      bottom: 2px;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.pagination {
+  font-size: 0;
+  .notosans();
+
+  &__label {
+    display: none;
+    vertical-align: middle;
+    margin-right: 25px;
+    font-size: 13px;
+    color: @gray4;
+
+    @media screen and (min-width: @breakpoint1) {
+      display: inline-block;
+    }
+  }
+
+  &__list {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 26px;
+    margin-left: 1px;
+  }
+
+  &__item {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 32px;
+    border-radius: 50%;
+    margin-right: 2px;
+
+    @media screen and (min-width: @breakpoint1) {
+      margin-right: 12px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &_active {
+      font-weight: bold;
+      background-color: @gray3;
+
+    }
+  }
+
+  &__text {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
+
+.banner {
+  display: none;
+  float: right;
+  width: 35.6%;
+  padding-bottom: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top right;
+  margin-right: 10px;
+
+  @media screen and (min-width: @breakpoint1) {
+    display: block;
+  }
+
+  @media screen and (min-width: @breakpoint2) {
+    width: calc(~"25% - 20px");
+    padding-bottom: 31%;
+    margin-right: 20px;
+  }
+}
